@@ -25,6 +25,7 @@
 #define CSH2 28861
 #define ASH1 34322
 
+extern int currSong;
 
 #endif
 

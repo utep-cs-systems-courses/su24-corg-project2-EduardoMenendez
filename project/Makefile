@@ -4,7 +4,7 @@ COMMON_OBJECTS  =
 
 CPU             = msp430g2553
 
-CFLAGS          = -mmcu=${CPU} -I../h -L/opt/ti/msp430_gcc/include
+CFLAGS          = -mmcu=${CPU} -I./h -L/opt/ti/msp430_gcc/include
 
 
 
@@ -22,7 +22,7 @@ all: buzzer.elf
 
 #additional rules for files
 
-buzzer.elf: ${COMMON_OBJECTS} buzzer.o main.o ../lib/libTimer.a
+buzzer.elf: ${COMMON_OBJECTS} switches.o buzzer.o main.o ./lib/libTimer.a
 
 	${CC} ${CFLAGS} -o $@ $^
 

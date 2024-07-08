@@ -9,6 +9,11 @@ void buzzer_init(){
     P2SEL |= BIT6;
     P2DIR = BIT6;
 }
+void buzzer_off(){
+    P2SEL2 &= (BIT6|BIT7);
+    P2SEL &= ~BIT6;
+    P2DIR = 0;
+}
 
 void buzzer_set_period(short cycles){
     CCR0 = cycles;
